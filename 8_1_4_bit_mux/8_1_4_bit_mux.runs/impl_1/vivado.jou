@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed May 31 14:10:54 2023
+# Process ID: 16288
+# Current directory: C:/Users/DELL/Documents/NanoProcessor/8_1_4_bit_mux/8_1_4_bit_mux.runs/impl_1
+# Command line: vivado.exe -log mux_8_way_4_bit.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mux_8_way_4_bit.tcl -notrace
+# Log file: C:/Users/DELL/Documents/NanoProcessor/8_1_4_bit_mux/8_1_4_bit_mux.runs/impl_1/mux_8_way_4_bit.vdi
+# Journal file: C:/Users/DELL/Documents/NanoProcessor/8_1_4_bit_mux/8_1_4_bit_mux.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source mux_8_way_4_bit.tcl -notrace
