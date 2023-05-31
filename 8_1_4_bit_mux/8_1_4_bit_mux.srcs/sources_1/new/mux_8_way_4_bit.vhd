@@ -66,6 +66,9 @@ case RegSel is
         Mux_out <= Reg_6;
     when "111" =>
         Mux_out <= Reg_7;
+    when others =>
+        Mux_out <= "0000"; -- this case will never occur
+        
 end case;
 end process;
 

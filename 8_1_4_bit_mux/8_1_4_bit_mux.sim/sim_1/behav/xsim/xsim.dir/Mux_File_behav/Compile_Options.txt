@@ -1,0 +1,1 @@
+-wto "7d3d690f09744acca2edec635d7aa7a0" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Mux_File_behav" "xil_defaultlib.Mux_File" -log "elaborate.log" 
