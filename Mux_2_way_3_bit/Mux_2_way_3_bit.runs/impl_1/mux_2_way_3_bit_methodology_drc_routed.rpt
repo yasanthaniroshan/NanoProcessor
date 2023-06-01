@@ -1,0 +1,34 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Thu Jun  1 11:20:40 2023
+| Host         : CSE-ADVLABPC-03 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_methodology -file mux_2_way_3_bit_methodology_drc_routed.rpt -pb mux_2_way_3_bit_methodology_drc_routed.pb -rpx mux_2_way_3_bit_methodology_drc_routed.rpx
+| Design       : mux_2_way_3_bit
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

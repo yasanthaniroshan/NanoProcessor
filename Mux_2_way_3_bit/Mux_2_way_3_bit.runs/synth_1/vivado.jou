@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Thu Jun  1 11:18:30 2023
+# Process ID: 6716
+# Current directory: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.runs/synth_1
+# Command line: vivado.exe -log mux_2_way_3_bit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux_2_way_3_bit.tcl
+# Log file: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.runs/synth_1/mux_2_way_3_bit.vds
+# Journal file: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mux_2_way_3_bit.tcl -notrace

@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Thu Jun  1 11:20:42 2023
+| Host         : CSE-ADVLABPC-03 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_bus_skew -warn_on_violation -file mux_2_way_3_bit_bus_skew_routed.rpt -pb mux_2_way_3_bit_bus_skew_routed.pb -rpx mux_2_way_3_bit_bus_skew_routed.rpx
+| Design       : mux_2_way_3_bit
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

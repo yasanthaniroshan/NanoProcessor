@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Thu Jun  1 11:26:51 2023
+# Process ID: 6052
+# Current directory: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim/xsim.dir/mux_2_way_3_bit_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim/xsim.dir/mux_2_way_3_bit_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/workshop/Documents/210436E/Mux_2_way_3_bit/Mux_2_way_3_bit.sim/sim_1/behav/xsim/xsim.dir/mux_2_way_3_bit_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Jun  1 11:26:57 2023. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun  1 11:26:57 2023...
