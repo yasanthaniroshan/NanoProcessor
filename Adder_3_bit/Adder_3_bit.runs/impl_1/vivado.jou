@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jun  1 10:41:04 2023
+# Process ID: 16624
+# Current directory: C:/Users/DELL/Documents/CS/Computer systems/Adder_3_bit/Adder_3_bit.runs/impl_1
+# Command line: vivado.exe -log Adder_3_bit.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Adder_3_bit.tcl -notrace
+# Log file: C:/Users/DELL/Documents/CS/Computer systems/Adder_3_bit/Adder_3_bit.runs/impl_1/Adder_3_bit.vdi
+# Journal file: C:/Users/DELL/Documents/CS/Computer systems/Adder_3_bit/Adder_3_bit.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Adder_3_bit.tcl -notrace
