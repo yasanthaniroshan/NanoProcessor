@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun  7 21:07:16 2023
+# Process ID: 25356
+# Current directory: C:/Users/DELL/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.runs/synth_1
+# Command line: vivado.exe -log Instruction_Decoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Instruction_Decoder.tcl
+# Log file: C:/Users/DELL/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.runs/synth_1/Instruction_Decoder.vds
+# Journal file: C:/Users/DELL/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Instruction_Decoder.tcl -notrace
