@@ -30,13 +30,17 @@ set_property ip_output_repo {c:/Users/DELL/Documents/NanoProcessor/Nano Processo
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/Adder_3_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Decoder_2_to_4.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Decoder_3_to_8.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/HA.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/ProgramCounter.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/ProgramROM.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_2_way_3_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd}

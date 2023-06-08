@@ -35,8 +35,9 @@ entity RegBank is
     Port ( RegSel : in STD_LOGIC_VECTOR (2 downto 0);
            Clk : in STD_LOGIC;
            En : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            Data_IN : in STD_LOGIC_VECTOR(3 downto 0);
-           Data_Bus_0 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_0 : out STD_LOGIC_VECTOR (3 downto 0) := "0000" ;
            Data_Bus_1 : out STD_LOGIC_VECTOR (3 downto 0);
            Data_Bus_2 : out STD_LOGIC_VECTOR (3 downto 0);
            Data_Bus_3 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -141,4 +142,18 @@ Reg_7 : Reg
            Q => Data_Bus_7
         );
 
+
+--process (Reset)
+--begin 
+--    if Reset = '1' then
+--        Data_Bus_1 <= "0000";
+--        Data_Bus_2 <= "0000";
+--        Data_Bus_3 <= "0000";
+--        Data_Bus_4 <= "0000";
+--        Data_Bus_5 <= "0000";
+--        Data_Bus_6 <= "0000";
+--        Data_Bus_7 <= "0000";
+        
+--    end if;
+--end process;
 end Behavioral;

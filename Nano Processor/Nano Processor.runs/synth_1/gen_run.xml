@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686200098">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686211195">
   <File Type="PA-TCL" Name="NanoProcessor.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="NanoProcessor_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="NanoProcessor_reports.tcl"/>
@@ -15,6 +15,14 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd"/>
         <Attr Name="ImportTime" Val="1685526187"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Adder_3_bit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Adder_3_bit/Adder_3_bit.srcs/sources_1/new/Adder_3_bit.vhd"/>
+        <Attr Name="ImportTime" Val="1685596082"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -59,6 +67,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/ProgramCounter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Program Counter/Program Counter.srcs/sources_1/new/ProgramCounter.vhd"/>
+        <Attr Name="ImportTime" Val="1685597960"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ProgramROM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd"/>
@@ -71,6 +93,14 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd"/>
         <Attr Name="ImportTime" Val="1684826165"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/mux_2_way_3_bit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Mux_2_way_3_bit/Mux_2_way_3_bit.srcs/sources_1/new/mux_2_way_3_bit.vhd"/>
+        <Attr Name="ImportTime" Val="1685600020"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -100,15 +130,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../CS/Computer systems/Lab 6/Lab 6.srcs/sources_1/imports/new/Slow_Clk.vhd"/>
         <Attr Name="ImportTime" Val="1682531375"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Documents/NanoProcessor/Mux_2_way_3_bit/Mux_2_way_3_bit.srcs/sources_1/new/mux_2_way_3_bit.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Mux_2_way_3_bit/Mux_2_way_3_bit.srcs/sources_1/new/mux_2_way_3_bit.vhd"/>
-        <Attr Name="ImportTime" Val="1685600020"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

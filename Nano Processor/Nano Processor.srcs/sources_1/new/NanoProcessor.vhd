@@ -33,11 +33,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity NanoProcessor is
     Port (
-        InstructionBusTemp : in STD_LOGIC_VECTOR (11 downto 0);
         Clk_In : in STD_LOGIC;
-        JumpFlagTemp : out STD_LOGIC;
-        JumpAddressTemp : out STD_LOGIC_VECTOR (2 downto 0);
-        AddSubOutTemp : out STD_LOGIC_VECTOR (3 downto 0)
+        Reset : in STD_LOGIC;
+        TestOut : out STD_LOGIC
     );
 end NanoProcessor;
 
@@ -84,6 +82,7 @@ component RegBank
     Port ( RegSel : in STD_LOGIC_VECTOR (2 downto 0);
        Clk : in STD_LOGIC;
        En : in STD_LOGIC;
+       Reset : in STD_LOGIC;
        Data_IN : in STD_LOGIC_VECTOR(3 downto 0);
        Data_Bus_0 : out STD_LOGIC_VECTOR (3 downto 0);
        Data_Bus_1 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -106,6 +105,38 @@ component Add_Sub
            );
 end component;
 
+component ProgramROM
+    Port ( I : in STD_LOGIC_VECTOR (2 downto 0);
+           O : out STD_LOGIC_VECTOR (11 downto 0));    
+end component;
+
+component mux_2_way_3_bit
+    Port ( IN_0 : in STD_LOGIC_VECTOR (2 downto 0);
+           IN_1 : in STD_LOGIC_VECTOR (2 downto 0);
+           Sel : in STD_LOGIC;
+           Mux_out : out STD_LOGIC_VECTOR (2 downto 0));
+end component;
+
+component Adder_3_bit 
+
+    Port ( A : in STD_LOGIC_VECTOR (2 downto 0);
+           B : in STD_LOGIC_VECTOR (2 downto 0);
+           C_in : in STD_LOGIC;
+           S : out STD_LOGIC_VECTOR (2 downto 0);
+           C_out : out STD_LOGIC);
+
+end component;
+
+
+component ProgramCounter
+
+    Port ( Clk : in STD_LOGIC;
+           Reset : in STD_LOGIC;
+           NextAddress : in STD_LOGIC_VECTOR (2 downto 0);
+           MemorySelect : out STD_LOGIC_VECTOR (2 downto 0));
+
+end component;
+
 
 
 signal InstructionBus : STD_LOGIC_VECTOR (11 downto 0);
@@ -118,8 +149,6 @@ signal DataBus0, DataBus1, DataBus2, DataBus3, DataBus4, DataBus5, DataBus6, Dat
 signal JumpFlag : STD_LOGIC;
 signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
 
-
-       
        
 signal RegSel : STD_LOGIC_VECTOR ( 2 downto 0);
 signal Clk : STD_LOGIC;
@@ -132,6 +161,15 @@ signal AddSubOut : STD_LOGIC_VECTOR (3 downto 0);
 
 
 signal OverflowFlag, ZeroFlag : STD_LOGIC;
+
+signal MemorySelect : STD_LOGIC_VECTOR (2 downto 0);
+signal Adder3BitOutput : STD_LOGIC_VECTOR (2 downto 0);
+signal NewInstructionAddress : STD_LOGIC_VECTOR (2 downto 0);
+
+
+
+-- Delete this, only for testing
+signal testSignal : STD_LOGIC := '1';
 
 
 
@@ -147,7 +185,8 @@ Instruction_Decoder_0 : Instruction_Decoder
        RegisterSelectB => RegisterSelectB,
        Add_Sub_Select => AddSubSelect,
        RegForJump => MuxAOut,
-       JumpFlag => JumpFlag
+       JumpFlag => JumpFlag,
+       JumpAddress => JumpAddress
     );
     
 
@@ -156,6 +195,7 @@ Register_Bank : RegBank
         RegSel => RegisterEnable,
         Clk => Clk,
         En => RegBankEnable,
+        Reset => Reset,
         Data_IN => RegInput,
         Data_Bus_0 => DataBus0,
         Data_Bus_1 => DataBus1,
@@ -208,7 +248,6 @@ Mux_8_Way_B : mux_8_way_4_bit
         );
                
 Load_Select_Mux : mux_2_way_4_bit
-
 port map (
     IN_0 => ImmediateValue,
     IN_1 => AddSubOut,
@@ -216,11 +255,38 @@ port map (
     Mux_out => RegInput
 );
 
-JumpFlagTemp <= JumpFlag;
-JumpAddressTemp <= JumpAddress;
-AddSubOutTemp <= AddSubOut;
-InstructionBus <= InstructionBusTemp;
-Clk <= Clk_In;
+ProgramROM_0 : ProgramROM
+port map (
+    I => MemorySelect,
+    O => InstructionBus
+);
 
+Mux_2_way_3_bit_0 : mux_2_way_3_bit
+port map (
+    IN_0 => Adder3BitOutput,
+    IN_1 => JumpAddress,
+    Sel => JumpFlag,
+    Mux_out => NewInstructionAddress
+);
+
+Adder_3_bit_0 : Adder_3_bit 
+port map (
+    A => MemorySelect,
+    B => "001",
+    C_in => '0',
+    S => Adder3BitOutput
+);
+
+Program_Counter : ProgramCounter
+port map (
+    Clk => Clk,
+    Reset => Reset,
+    NextAddress => NewInstructionAddress,
+    MemorySelect => MemorySelect
+);
+
+
+Clk <= Clk_In;
+TestOut <= testSignal;
 
 end Behavioral;

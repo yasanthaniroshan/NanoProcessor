@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Thu Jun  8 10:26:24 2023
+| Date             : Thu Jun  8 13:31:28 2023
 | Host             : Yasantha-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file NanoProcessor_power_routed.rpt -pb NanoProcessor_power_summary_routed.pb -rpx NanoProcessor_power_routed.rpx
 | Design           : NanoProcessor
@@ -52,9 +52,9 @@ Table of Contents
 +--------------+-----------+----------+-----------+-----------------+
 | On-Chip      | Power (W) | Used     | Available | Utilization (%) |
 +--------------+-----------+----------+-----------+-----------------+
-| Slice Logic  |     0.000 |        2 |       --- |             --- |
-|   Others     |     0.000 |        2 |       --- |             --- |
-| I/O          |     0.000 |        4 |       106 |            3.77 |
+| Slice Logic  |     0.000 |        1 |       --- |             --- |
+|   Others     |     0.000 |        1 |       --- |             --- |
+| I/O          |     0.000 |        1 |       106 |            0.94 |
 | Static Power |     0.068 |          |           |                 |
 | Total        |     0.068 |          |           |                 |
 +--------------+-----------+----------+-----------+-----------------+
