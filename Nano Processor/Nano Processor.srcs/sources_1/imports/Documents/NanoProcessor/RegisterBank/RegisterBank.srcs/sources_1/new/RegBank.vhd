@@ -53,6 +53,7 @@ architecture Behavioral of RegBank is
 component Reg
     Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
            En : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
@@ -81,6 +82,7 @@ Reg_0 : Reg
     port map(
        D => "0000",
        En => '1',
+       Reset => '0',
        Clk => Clk,
        Q => Data_Bus_0
     );
@@ -89,6 +91,7 @@ Reg_1 : Reg
     port map(
        D => Data_IN,
        En => regsel_signal(1),
+       Reset => Reset,
        Clk => Clk,
        Q => Data_Bus_1
     );
@@ -97,6 +100,7 @@ Reg_2 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(2),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_2
         );
@@ -105,6 +109,7 @@ Reg_3 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(3),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_3
         );
@@ -113,6 +118,7 @@ Reg_4 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(4),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_4
         );
@@ -122,6 +128,7 @@ Reg_5 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(5),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_5
         );
@@ -130,6 +137,7 @@ Reg_6 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(6),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_6
         );
@@ -138,6 +146,7 @@ Reg_7 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(7),
+           Reset => Reset,
            Clk => Clk,
            Q => Data_Bus_7
         );

@@ -11,18 +11,17 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="687994096fs"></ZoomEndTime>
-      <Cursor1Time time="75339000fs"></Cursor1Time>
+      <ZoomEndTime time="341440599fs"></ZoomEndTime>
+      <Cursor1Time time="107577000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="176"></NameColumnWidth>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="11" />
    <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/InstructionBus" type="array">
       <obj_property name="ElementShortName">InstructionBus[11:0]</obj_property>
       <obj_property name="ObjectShortName">InstructionBus[11:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
@@ -32,41 +31,15 @@
       <obj_property name="ElementShortName">S[3:0]</obj_property>
       <obj_property name="ObjectShortName">S[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/A" type="array">
-      <obj_property name="ElementShortName">A[3:0]</obj_property>
-      <obj_property name="ObjectShortName">A[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/B" type="array">
-      <obj_property name="ElementShortName">B[3:0]</obj_property>
-      <obj_property name="ObjectShortName">B[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/RegisterSelectA" type="array">
-      <obj_property name="ElementShortName">RegisterSelectA[2:0]</obj_property>
-      <obj_property name="ObjectShortName">RegisterSelectA[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Mux_8_Way_A/Mux_out" type="array">
-      <obj_property name="ElementShortName">Mux_out[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Mux_out[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/RegisterSelectB" type="array">
-      <obj_property name="ElementShortName">RegisterSelectB[2:0]</obj_property>
-      <obj_property name="ObjectShortName">RegisterSelectB[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Mux_8_Way_B/RegSel" type="array">
-      <obj_property name="ElementShortName">RegSel[2:0]</obj_property>
-      <obj_property name="ObjectShortName">RegSel[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/NanoProcessorSim/UUT/Mux_8_Way_B/Mux_out" type="array">
-      <obj_property name="ElementShortName">Mux_out[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Mux_out[3:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Register_Bank/Data_Bus_1" type="array">
       <obj_property name="ElementShortName">Data_Bus_1[3:0]</obj_property>
       <obj_property name="ObjectShortName">Data_Bus_1[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Register_Bank/Data_Bus_2" type="array">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">Data_Bus_2[3:0]</obj_property>
       <obj_property name="ObjectShortName">Data_Bus_2[3:0]</obj_property>
+      <obj_property name="label">/NanoProcessorSim/UUT/Register_Bank/Data_Bus_2Data_Bus_2[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/RegisterEnable" type="array">
       <obj_property name="ElementShortName">RegisterEnable[2:0]</obj_property>
@@ -83,5 +56,13 @@
    <wvobject fp_name="/NanoProcessorSim/Reset" type="logic">
       <obj_property name="ElementShortName">Reset</obj_property>
       <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/OverflowFlag" type="logic">
+      <obj_property name="ElementShortName">OverflowFlag</obj_property>
+      <obj_property name="ObjectShortName">OverflowFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/ZeroFlag" type="logic">
+      <obj_property name="ElementShortName">ZeroFlag</obj_property>
+      <obj_property name="ObjectShortName">ZeroFlag</obj_property>
    </wvobject>
 </wave_config>

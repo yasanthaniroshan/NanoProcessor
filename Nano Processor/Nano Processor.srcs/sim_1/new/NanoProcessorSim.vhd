@@ -12,7 +12,8 @@ architecture sim of NanoProcessorSim is
     Port (
       Clk_In : in STD_LOGIC;
       Reset : in STD_LOGIC;
-      TestOut : out STD_LOGIC
+      OverflowFlag : out STD_LOGIC;
+      ZeroFlag : out STD_LOGIC
      );
   end component;
 
@@ -21,7 +22,7 @@ architecture sim of NanoProcessorSim is
   signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
   signal AddSubOut : STD_LOGIC_VECTOR (3 downto 0);
   signal Reset : STD_LOGIC := '0';
-  signal TestOut : STD_LOGIC;
+  signal ZeroFlag, OverflowFlag : STD_LOGIC;
 
   
 begin
@@ -30,7 +31,8 @@ begin
     port map (
       Clk_In => Clk,
       Reset => Reset,
-      TestOut => TestOut
+      ZeroFlag => ZeroFlag,
+      OverflowFlag => OverflowFlag
     );
 
   -- Clock generation process
@@ -41,6 +43,19 @@ begin
     Clk <= '1';
     wait for 10 ns;
   end process;
+  
+  process
+  begin
+  
+  wait for 200ns;
+  
+  reset <= '1';
+  wait for 50ns;
+  
+  reset <= '0';
+  wait;
+  
+end process;
 
 
 

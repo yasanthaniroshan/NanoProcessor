@@ -35,8 +35,17 @@ entity RegBank is
     Port ( RegSel : in STD_LOGIC_VECTOR (2 downto 0);
            Clk : in STD_LOGIC;
            En : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            Data_IN : in STD_LOGIC_VECTOR(3 downto 0);
-           Data_OUT : out STD_LOGIC_VECTOR (3 downto 0));
+           Data_Bus_0 : out STD_LOGIC_VECTOR (3 downto 0) := "0000" ;
+           Data_Bus_1 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_2 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_3 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_4 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_5 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_6 : out STD_LOGIC_VECTOR (3 downto 0);
+           Data_Bus_7 : out STD_LOGIC_VECTOR (3 downto 0));
+           
 end RegBank;
 
 architecture Behavioral of RegBank is
@@ -44,6 +53,7 @@ architecture Behavioral of RegBank is
 component Reg
     Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
            En : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
@@ -67,69 +77,92 @@ Decoder_3_to_8_0 : Decoder_3_to_8
         Y => regsel_signal
     );
     
+-- Register R0 is to be hardcoded to 0000
 Reg_0 : Reg
     port map(
-       D => Data_IN,
-       En => regsel_signal(0),
+       D => "0000",
+       En => '1',
+       Reset => '0',
        Clk => Clk,
-       Q => Data_OUT
+       Q => Data_Bus_0
     );
     
 Reg_1 : Reg
     port map(
        D => Data_IN,
        En => regsel_signal(1),
+       Reset => Reset,
        Clk => Clk,
-       Q => Data_OUT
+       Q => Data_Bus_1
     );
     
 Reg_2 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(2),
+           Reset => Reset,
            Clk => Clk,
-           Q => Data_OUT
+           Q => Data_Bus_2
         );
         
 Reg_3 : Reg
-            port map(
-               D => Data_IN,
-               En => regsel_signal(3),
-               Clk => Clk,
-               Q => Data_OUT
-            );
+        port map(
+           D => Data_IN,
+           En => regsel_signal(3),
+           Reset => Reset,
+           Clk => Clk,
+           Q => Data_Bus_3
+        );
 
 Reg_4 : Reg
-    port map(
-       D => Data_IN,
-       En => regsel_signal(4),
-       Clk => Clk,
-       Q => Data_OUT
-    );
+        port map(
+           D => Data_IN,
+           En => regsel_signal(4),
+           Reset => Reset,
+           Clk => Clk,
+           Q => Data_Bus_4
+        );
     
     
 Reg_5 : Reg
         port map(
            D => Data_IN,
            En => regsel_signal(5),
+           Reset => Reset,
            Clk => Clk,
-           Q => Data_OUT
+           Q => Data_Bus_5
         );
         
 Reg_6 : Reg
-            port map(
-               D => Data_IN,
-               En => regsel_signal(6),
-               Clk => Clk,
-               Q => Data_OUT
-            );
+        port map(
+           D => Data_IN,
+           En => regsel_signal(6),
+           Reset => Reset,
+           Clk => Clk,
+           Q => Data_Bus_6
+        );
             
 Reg_7 : Reg
-                port map(
-                   D => Data_IN,
-                   En => regsel_signal(7),
-                   Clk => Clk,
-                   Q => Data_OUT
-                );
+        port map(
+           D => Data_IN,
+           En => regsel_signal(7),
+           Reset => Reset,
+           Clk => Clk,
+           Q => Data_Bus_7
+        );
 
+
+--process (Reset)
+--begin 
+--    if Reset = '1' then
+--        Data_Bus_1 <= "0000";
+--        Data_Bus_2 <= "0000";
+--        Data_Bus_3 <= "0000";
+--        Data_Bus_4 <= "0000";
+--        Data_Bus_5 <= "0000";
+--        Data_Bus_6 <= "0000";
+--        Data_Bus_7 <= "0000";
+        
+--    end if;
+--end process;
 end Behavioral;

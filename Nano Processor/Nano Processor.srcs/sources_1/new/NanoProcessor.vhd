@@ -35,7 +35,8 @@ entity NanoProcessor is
     Port (
         Clk_In : in STD_LOGIC;
         Reset : in STD_LOGIC;
-        TestOut : out STD_LOGIC
+        OverflowFlag : out STD_LOGIC;
+        ZeroFlag : out STD_LOGIC
     );
 end NanoProcessor;
 
@@ -159,8 +160,6 @@ signal MuxAOut, MuxBOut : STD_LOGIC_VECTOR (3 downto 0);
 
 signal AddSubOut : STD_LOGIC_VECTOR (3 downto 0);
 
-
-signal OverflowFlag, ZeroFlag : STD_LOGIC;
 
 signal MemorySelect : STD_LOGIC_VECTOR (2 downto 0);
 signal Adder3BitOutput : STD_LOGIC_VECTOR (2 downto 0);
@@ -287,6 +286,5 @@ port map (
 
 
 Clk <= Clk_In;
-TestOut <= testSignal;
 
 end Behavioral;
