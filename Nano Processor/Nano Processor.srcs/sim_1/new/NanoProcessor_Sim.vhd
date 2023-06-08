@@ -11,31 +11,26 @@ architecture sim of NanoProcessor_Sim is
   component NanoProcessor is
     Port (
       InstructionBusTemp : in STD_LOGIC_VECTOR (11 downto 0);
+      Clk_In : in STD_LOGIC;
       JumpFlagTemp : out STD_LOGIC;
       JumpAddressTemp : out STD_LOGIC_VECTOR ( 2 downto 0)
      );
   end component;
 
   signal InstructionBus : STD_LOGIC_VECTOR (11 downto 0);
-  signal RegisterEnable : STD_LOGIC_VECTOR (2 downto 0);
-  signal LoadSelect : STD_LOGIC;
-  signal ImmediateValue : STD_LOGIC_VECTOR (3 downto 0);
-  signal RegisterSelectA, RegisterSelectB : STD_LOGIC_VECTOR (2 downto 0);
-  signal AddSubSelect : STD_LOGIC;
-  signal RegForJump : STD_LOGIC_VECTOR (3 downto 0);
-  signal JumpFlag : STD_LOGIC;
+  signal Clk, JumpFlag : STD_LOGIC;
   signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
-  signal RegSel : STD_LOGIC_VECTOR (2 downto 0);
-  signal Clk : STD_LOGIC;
-  signal RegBankEnable : STD_LOGIC;
-  signal RegInput : STD_LOGIC_VECTOR (3 downto 0);
-  signal OverflowFlag, ZeroFlag : STD_LOGIC;
+
   
 begin
 
   UUT : NanoProcessor
     port map (
-      InstructionBusTemp => InstructionBus
+      InstructionBusTemp => InstructionBus,
+      Clk_In => Clk,
+      JumpFlagTemp => JumpFlag,
+      JumpAddressTemp => JumpAddress
+      
     );
 
   -- Clock generation process
@@ -52,7 +47,7 @@ begin
   begin
   
     -- Load an instruction
-    InstructionBus <= "100010000101"; -- 1 0 R R R 0 0 0 d d d d
+    InstructionBus <= "100010000010"; -- 1 0 R R R 0 0 0 d d d d
     wait for 20 ns;
     InstructionBus <= "100100000001";
     wait for 20 ns;

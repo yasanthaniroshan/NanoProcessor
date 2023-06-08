@@ -1,6 +1,6 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xlinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto e356f6c424464a5e8017c50eb5469840 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot NanoProcessor_Sim_behav xil_defaultlib.NanoProcessor_Sim -log elaborate.log 
+Running: D:/Xlinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto e356f6c424464a5e8017c50eb5469840 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot NanoProcessorSim_behav xil_defaultlib.NanoProcessorSim -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -22,5 +22,5 @@ Compiling architecture behavioral of entity xil_defaultlib.Add_Sub [add_sub_defa
 Compiling architecture behavioral of entity xil_defaultlib.mux_8_way_4_bit [mux_8_way_4_bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.mux_2_way_4_bit [mux_2_way_4_bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
-Compiling architecture sim of entity xil_defaultlib.nanoprocessor_sim
-Built simulation snapshot NanoProcessor_Sim_behav
+Compiling architecture sim of entity xil_defaultlib.nanoprocessorsim
+Built simulation snapshot NanoProcessorSim_behav

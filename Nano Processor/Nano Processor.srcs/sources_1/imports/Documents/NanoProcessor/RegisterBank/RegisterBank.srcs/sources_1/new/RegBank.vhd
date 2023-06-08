@@ -75,10 +75,11 @@ Decoder_3_to_8_0 : Decoder_3_to_8
         Y => regsel_signal
     );
     
+-- Register R0 is to be hardcoded to 0000
 Reg_0 : Reg
     port map(
-       D => Data_IN,
-       En => regsel_signal(0),
+       D => "0000",
+       En => '1',
        Clk => Clk,
        Q => Data_Bus_0
     );

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686161543">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686200098">
   <File Type="PA-TCL" Name="NanoProcessor.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="NanoProcessor_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="NanoProcessor_reports.tcl"/>
@@ -125,7 +125,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="NanoProcessor"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -135,9 +134,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

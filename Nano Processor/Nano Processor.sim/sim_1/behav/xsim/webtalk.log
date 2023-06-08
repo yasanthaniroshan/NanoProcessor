@@ -2,13 +2,13 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Wed Jun  7 23:47:08 2023
-# Process ID: 25028
+# Start of session at: Thu Jun  8 10:32:09 2023
+# Process ID: 22552
 # Current directory: C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim/xsim.dir/NanoProcessor_Sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim/xsim.dir/NanoProcessorSim_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/DELL/Documents/NanoProcessor/Nano -notrace
 couldn't read file "C:/Users/DELL/Documents/NanoProcessor/Nano": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Wed Jun  7 23:47:08 2023...
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun  8 10:32:09 2023...

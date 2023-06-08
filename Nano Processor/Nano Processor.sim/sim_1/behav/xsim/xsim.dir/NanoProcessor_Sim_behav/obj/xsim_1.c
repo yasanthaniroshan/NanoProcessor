@@ -74,15 +74,15 @@ extern void execute_55(char*, char *);
 extern void execute_95(char*, char *);
 extern void execute_99(char*, char *);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-extern void transaction_36(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[31] = {(funcp)execute_102, (funcp)execute_103, (funcp)execute_100, (funcp)execute_101, (funcp)execute_15, (funcp)execute_28, (funcp)execute_29, (funcp)execute_30, (funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_34, (funcp)execute_19, (funcp)execute_20, (funcp)execute_21, (funcp)execute_22, (funcp)execute_36, (funcp)execute_88, (funcp)execute_89, (funcp)execute_90, (funcp)execute_91, (funcp)execute_92, (funcp)execute_93, (funcp)execute_59, (funcp)execute_60, (funcp)execute_54, (funcp)execute_55, (funcp)execute_95, (funcp)execute_99, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_36};
+extern void transaction_22(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[31] = {(funcp)execute_102, (funcp)execute_103, (funcp)execute_100, (funcp)execute_101, (funcp)execute_15, (funcp)execute_28, (funcp)execute_29, (funcp)execute_30, (funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_34, (funcp)execute_19, (funcp)execute_20, (funcp)execute_21, (funcp)execute_22, (funcp)execute_36, (funcp)execute_88, (funcp)execute_89, (funcp)execute_90, (funcp)execute_91, (funcp)execute_92, (funcp)execute_93, (funcp)execute_59, (funcp)execute_60, (funcp)execute_54, (funcp)execute_55, (funcp)execute_95, (funcp)execute_99, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_22};
 const int NumRelocateId= 31;
 
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/NanoProcessor_Sim_behav/xsim.reloc",  (void **)funcTab, 31);
-	iki_vhdl_file_variable_register(dp + 18288);
-	iki_vhdl_file_variable_register(dp + 18344);
+	iki_vhdl_file_variable_register(dp + 15936);
+	iki_vhdl_file_variable_register(dp + 15992);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

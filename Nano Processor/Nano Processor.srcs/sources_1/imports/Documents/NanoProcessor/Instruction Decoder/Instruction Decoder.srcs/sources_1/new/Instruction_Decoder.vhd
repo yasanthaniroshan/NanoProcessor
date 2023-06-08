@@ -48,7 +48,7 @@ architecture Behavioral of Instruction_Decoder is
 
 begin
 
-process (InstructionBus)
+process (InstructionBus,RegForJump)
 begin
 
 -- Set the jump flag to 0 and jump address to undefined by default
@@ -138,8 +138,8 @@ elsif (InstructionBus(11 downto 10) = "11") then
     -- Set immediate value to undefined since it is not needed
     ImmediateValue <= "UUUU";
     
-    -- Register R0 is hardcoded to 0000
-    RegisterSelectA <= "000";
+    -- Load the required register into the MuxA
+    RegisterSelectA <= InstructionBus(9 downto 7);
     
     -- We don't need a register loaded in the 8 way mux B
     RegisterSelectB <= "UUU";

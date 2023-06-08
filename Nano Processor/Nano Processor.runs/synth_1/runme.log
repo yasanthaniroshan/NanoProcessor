@@ -14,16 +14,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 34244 
+INFO: Helper process launched with PID 24504 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 416.254 ; gain = 95.891
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 416.914 ; gain = 96.527
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'NanoProcessor' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:42]
-INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:34' bound to instance 'Instruction_Decoder_0' of component 'Instruction_Decoder' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'NanoProcessor' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:43]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:34' bound to instance 'Instruction_Decoder_0' of component 'Instruction_Decoder' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:47]
 WARNING: [Synth 8-614] signal 'RegForJump' is read in the process but is not in the sensitivity list [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (1#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:47]
-INFO: [Synth 8-3491] module 'RegBank' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:34' bound to instance 'Register_Bank' of component 'RegBank' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:151]
+INFO: [Synth 8-3491] module 'RegBank' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:34' bound to instance 'Register_Bank' of component 'RegBank' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'RegBank' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:50]
 INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:40]
@@ -43,7 +43,7 @@ INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/DELL/Documents/NanoProce
 INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd:8' bound to instance 'Reg_6' of component 'Reg' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:127]
 INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd:8' bound to instance 'Reg_7' of component 'Reg' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:135]
 INFO: [Synth 8-256] done synthesizing module 'RegBank' (5#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd:50]
-INFO: [Synth 8-3491] module 'Add_Sub' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:34' bound to instance 'Add_Sub_Component' of component 'Add_Sub' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:168]
+INFO: [Synth 8-3491] module 'Add_Sub' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:34' bound to instance 'Add_Sub_Component' of component 'Add_Sub' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:169]
 INFO: [Synth 8-638] synthesizing module 'Add_Sub' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:44]
 INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:61]
 INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd:42]
@@ -56,7 +56,7 @@ INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/DELL/Documents/NanoProces
 INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:76]
 INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:83]
 INFO: [Synth 8-256] done synthesizing module 'Add_Sub' (8#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/new/Add_Sub.vhd:44]
-INFO: [Synth 8-3491] module 'mux_8_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:34' bound to instance 'Mux_8_Way_A' of component 'mux_8_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:178]
+INFO: [Synth 8-3491] module 'mux_8_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:34' bound to instance 'Mux_8_Way_A' of component 'mux_8_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:179]
 INFO: [Synth 8-638] synthesizing module 'mux_8_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:47]
 INFO: [Synth 8-226] default block is never used [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:52]
 WARNING: [Synth 8-614] signal 'Reg_0' is read in the process but is not in the sensitivity list [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:50]
@@ -68,16 +68,16 @@ WARNING: [Synth 8-614] signal 'Reg_5' is read in the process but is not in the s
 WARNING: [Synth 8-614] signal 'Reg_6' is read in the process but is not in the sensitivity list [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:50]
 WARNING: [Synth 8-614] signal 'Reg_7' is read in the process but is not in the sensitivity list [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'mux_8_way_4_bit' (9#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:47]
-INFO: [Synth 8-3491] module 'mux_8_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:34' bound to instance 'Mux_8_Way_B' of component 'mux_8_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:193]
-INFO: [Synth 8-3491] module 'mux_2_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd:34' bound to instance 'Load_Select_Mux' of component 'mux_2_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:207]
+INFO: [Synth 8-3491] module 'mux_8_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd:34' bound to instance 'Mux_8_Way_B' of component 'mux_8_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:194]
+INFO: [Synth 8-3491] module 'mux_2_way_4_bit' declared at 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd:34' bound to instance 'Load_Select_Mux' of component 'mux_2_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:208]
 INFO: [Synth 8-638] synthesizing module 'mux_2_way_4_bit' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'mux_2_way_4_bit' (10#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd:41]
-WARNING: [Synth 8-3848] Net JumpAddress in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:116]
-WARNING: [Synth 8-3848] Net InstructionBus in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:108]
-WARNING: [Synth 8-3848] Net RegSel in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:121]
-WARNING: [Synth 8-3848] Net Clk in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:122]
-WARNING: [Synth 8-3848] Net RegBankEnable in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:123]
-INFO: [Synth 8-256] done synthesizing module 'NanoProcessor' (11#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:42]
+WARNING: [Synth 8-3848] Net JumpAddress in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:117]
+WARNING: [Synth 8-3848] Net InstructionBus in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:109]
+WARNING: [Synth 8-3848] Net RegSel in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:122]
+WARNING: [Synth 8-3848] Net Clk in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:123]
+WARNING: [Synth 8-3848] Net RegBankEnable in module/entity NanoProcessor does not have driver. [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'NanoProcessor' (11#1) [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/NanoProcessor.vhd:43]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port JumpAddressTemp[2]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port JumpAddressTemp[1]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port JumpAddressTemp[0]
@@ -93,20 +93,21 @@ WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBus
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[2]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[1]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[0]
+WARNING: [Synth 8-3331] design NanoProcessor has unconnected port Clk_In
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 471.980 ; gain = 151.617
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 472.047 ; gain = 151.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 471.980 ; gain = 151.617
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 472.047 ; gain = 151.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 471.980 ; gain = 151.617
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 472.047 ; gain = 151.660
+---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "JumpFlag" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "LoadSelect" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "LoadSelect" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -118,7 +119,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'RegisterSelectA_reg' [C:/Us
 WARNING: [Synth 8-327] inferring latch for variable 'RegisterSelectB_reg' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:69]
 WARNING: [Synth 8-327] inferring latch for variable 'Add_Sub_Select_reg' [C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd:70]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 471.980 ; gain = 151.617
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 472.047 ; gain = 151.660
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'Mux_8_Way_A' (mux_8_way_4_bit) to 'Mux_8_Way_B'
 
@@ -206,6 +207,7 @@ WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBus
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[2]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[1]
 WARNING: [Synth 8-3331] design NanoProcessor has unconnected port InstructionBusTemp[0]
+WARNING: [Synth 8-3331] design NanoProcessor has unconnected port Clk_In
 WARNING: [Synth 8-264] enable of latch \Instruction_Decoder_0/ImmediateValue_reg[1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \Instruction_Decoder_0/ImmediateValue_reg[1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \Instruction_Decoder_0/ImmediateValue_reg[0]  is always disabled
@@ -292,7 +294,7 @@ WARNING: [Synth 8-3332] Sequential element (Register_Bank/Reg_7/Q_reg[2]) is unu
 WARNING: [Synth 8-3332] Sequential element (Register_Bank/Reg_7/Q_reg[1]) is unused and will be removed from module NanoProcessor.
 WARNING: [Synth 8-3332] Sequential element (Register_Bank/Reg_7/Q_reg[0]) is unused and will be removed from module NanoProcessor.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -305,7 +307,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -317,7 +319,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,7 +343,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -354,7 +356,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -366,25 +368,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -411,11 +413,11 @@ Report Instance Areas:
 |1     |top      |       |     4|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 103 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 593.254 ; gain = 272.891
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 591.312 ; gain = 270.926
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -423,10 +425,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+90 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 701.359 ; gain = 394.020
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 697.547 ; gain = 389.863
 INFO: [Common 17-1381] The checkpoint 'C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.runs/synth_1/NanoProcessor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file NanoProcessor_utilization_synth.rpt -pb NanoProcessor_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 701.359 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  7 23:42:42 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 697.547 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  8 10:25:22 2023...

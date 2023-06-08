@@ -34,8 +34,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity NanoProcessor is
     Port (
         InstructionBusTemp : in STD_LOGIC_VECTOR (11 downto 0);
+        Clk_In : in STD_LOGIC;
         JumpFlagTemp : out STD_LOGIC;
-        JumpAddressTemp : out STD_LOGIC_VECTOR (2 downto 0)
+        JumpAddressTemp : out STD_LOGIC_VECTOR (2 downto 0);
+        AddSubOutTemp : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end NanoProcessor;
 
@@ -105,6 +107,7 @@ component Add_Sub
 end component;
 
 
+
 signal InstructionBus : STD_LOGIC_VECTOR (11 downto 0);
 signal RegisterEnable : STD_LOGIC_VECTOR (2 downto 0);
 signal LoadSelect : STD_LOGIC;
@@ -120,7 +123,7 @@ signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
        
 signal RegSel : STD_LOGIC_VECTOR ( 2 downto 0);
 signal Clk : STD_LOGIC;
-signal RegBankEnable : STD_LOGIC;
+signal RegBankEnable : STD_LOGIC := '1';
 signal RegInput : STD_LOGIC_VECTOR (3 downto 0);
 
 signal MuxAOut, MuxBOut : STD_LOGIC_VECTOR (3 downto 0);
@@ -150,7 +153,7 @@ Instruction_Decoder_0 : Instruction_Decoder
 
 Register_Bank : RegBank
     port map (
-        RegSel => RegSel,
+        RegSel => RegisterEnable,
         Clk => Clk,
         En => RegBankEnable,
         Data_IN => RegInput,
@@ -177,7 +180,7 @@ Add_Sub_Component : Add_Sub
 
 Mux_8_Way_A : mux_8_way_4_bit
     port map (
-      RegSel => RegSel,
+      RegSel => RegisterSelectA,
       Reg_0 => DataBus0,
       Reg_1 => DataBus1,
       Reg_2 => DataBus2,
@@ -192,7 +195,7 @@ Mux_8_Way_A : mux_8_way_4_bit
     
 Mux_8_Way_B : mux_8_way_4_bit
         port map (
-          RegSel => RegSel,
+          RegSel => RegisterSelectB,
           Reg_0 => DataBus0,
           Reg_1 => DataBus1,
           Reg_2 => DataBus2,
@@ -215,6 +218,9 @@ port map (
 
 JumpFlagTemp <= JumpFlag;
 JumpAddressTemp <= JumpAddress;
+AddSubOutTemp <= AddSubOut;
+InstructionBus <= InstructionBusTemp;
+Clk <= Clk_In;
 
 
 end Behavioral;
