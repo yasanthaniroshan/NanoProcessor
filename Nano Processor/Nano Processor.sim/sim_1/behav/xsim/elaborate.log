@@ -4,27 +4,4 @@ Running: D:/Xlinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto e356f6c4244
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
-Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
-Compiling architecture behavioral of entity xil_defaultlib.RegBank [regbank_default]
-Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
-Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
-Compiling architecture behavioral of entity xil_defaultlib.Add_Sub [add_sub_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_8_way_4_bit [mux_8_way_4_bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_2_way_4_bit [mux_2_way_4_bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.ProgramROM [programrom_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_2_way_3_bit [mux_2_way_3_bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.Adder_3_bit [adder_3_bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.ProgramCounter [programcounter_default]
-Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
-Compiling architecture sim of entity xil_defaultlib.nanoprocessorsim
-Built simulation snapshot NanoProcessorSim_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

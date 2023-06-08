@@ -16,6 +16,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8904-Yasantha-PC/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,10 +40,12 @@ read_vhdl -library xil_defaultlib {
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/FA.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Add_Sub_4_bit/Add_Sub_4_bit.srcs/sources_1/imports/new/HA.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/Instruction Decoder/Instruction Decoder.srcs/sources_1/new/Instruction_Decoder.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/LUT_16_7.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/ProgramCounter.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/ProgramROM.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/imports/new/Reg.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/NanoProcessor/RegisterBank/RegisterBank.srcs/sources_1/new/RegBank.vhd}
+  {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/Documents/CS/Computer systems/Lab 6/Lab 6.srcs/sources_1/imports/new/Slow_Clk.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_2_way_3_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/new/mux_2_way_4_bit.vhd}
   {C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/sources_1/imports/new/mux_8_way_4_bit.vhd}
@@ -53,6 +59,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/constrs_1/new/pin_configuration.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/DELL/Documents/NanoProcessor/Nano Processor/Nano Processor.srcs/constrs_1/new/pin_configuration.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 

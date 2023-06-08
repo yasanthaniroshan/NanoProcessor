@@ -44,18 +44,9 @@ begin
     wait for 10 ns;
   end process;
   
-  process
-  begin
+
   
-  wait for 200ns;
   
-  reset <= '1';
-  wait for 50ns;
-  
-  reset <= '0';
-  wait;
-  
-end process;
 
 
 

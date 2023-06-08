@@ -36,7 +36,8 @@ entity NanoProcessor is
         Clk_In : in STD_LOGIC;
         Reset : in STD_LOGIC;
         OverflowFlag : out STD_LOGIC;
-        ZeroFlag : out STD_LOGIC
+        ZeroFlag : out STD_LOGIC;
+        seg: out STD_LOGIC_VECTOR (6 downto 0)
     );
 end NanoProcessor;
 
@@ -138,6 +139,16 @@ component ProgramCounter
 
 end component;
 
+component Slow_Clk
+    Port ( Slow_Clk_in : in STD_LOGIC;
+           Slow_Clk_out : out STD_LOGIC);
+end component;
+
+-- Get the values for the 7 segment display
+component LUT_16_7
+    Port ( I : in STD_LOGIC_VECTOR (3 downto 0);
+       O : out STD_LOGIC_VECTOR (6 downto 0));
+end component;
 
 
 signal InstructionBus : STD_LOGIC_VECTOR (11 downto 0);
@@ -153,6 +164,7 @@ signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
        
 signal RegSel : STD_LOGIC_VECTOR ( 2 downto 0);
 signal Clk : STD_LOGIC;
+signal Slow_Clk_in : STD_LOGIC;
 signal RegBankEnable : STD_LOGIC := '1';
 signal RegInput : STD_LOGIC_VECTOR (3 downto 0);
 
@@ -284,7 +296,17 @@ port map (
     MemorySelect => MemorySelect
 );
 
-
-Clk <= Clk_In;
+Slow_Clock : Slow_Clk
+    Port map ( Slow_Clk_In => Clk_In,
+           Slow_Clk_Out => Clk
+           );
+           
+           
+SevenSegLUT : LUT_16_7 
+ port map(
+    I => AddSubOut,
+    O => seg
+ );
+           
 
 end Behavioral;
