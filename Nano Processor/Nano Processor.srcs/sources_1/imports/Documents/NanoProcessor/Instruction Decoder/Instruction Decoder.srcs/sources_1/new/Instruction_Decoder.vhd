@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Instruction_Decoder is
     Port ( InstructionBus : in STD_LOGIC_VECTOR (11 downto 0);
            RegisterEnable : out STD_LOGIC_VECTOR (2 downto 0);
-           LoadSelect : out STD_LOGIC;
+           LoadSelect : out STD_LOGIC := 'Z';
            ImmediateValue : out STD_LOGIC_VECTOR (3 downto 0);
            RegisterSelectA : out STD_LOGIC_VECTOR (2 downto 0);
            RegisterSelectB : out STD_LOGIC_VECTOR (2 downto 0);
@@ -53,7 +53,7 @@ begin
 
 -- Set the jump flag to 0 and jump address to undefined by default
  JumpFlag <= '0';
- JumpAddress <= "UUU";
+ JumpAddress <= "000";
 
 -- MOVI Instruction
 if (InstructionBus(11 downto 10) = "10") then
@@ -65,24 +65,18 @@ if (InstructionBus(11 downto 10) = "10") then
     ImmediateValue <= InstructionBus( 3 downto 0);
     
     -- Unused values set to undefined
-    RegisterSelectA <= "UUU";
-    RegisterSelectB <= "UUU";
-    Add_Sub_Select <= 'U';
+    RegisterSelectA <= "000";
+    RegisterSelectB <= "000";
+    Add_Sub_Select <= '0';
 
 
 -- Add Instruction
 elsif (InstructionBus(11 downto 10) = "00") then
     
     -- Sample Instruction : 0 0 Ra Ra Ra Rb Rb Rb 0 0 0 0
-
-    -- Register A will store the output
-    RegisterEnable <= InstructionBus (9 downto 7);
     
-    -- Set Load select to 1 to allow Register to store output of 4 bit adder
+        -- Set Load select to 1 to allow Register to store output of 4 bit adder
     LoadSelect <= '1';
-    
-    -- Set the Immediate Value to undefined
-    ImmediateValue <= "UUUU";
     
     -- Register for MUX A is represented by the bits 9 downto 7
     RegisterSelectA <= InstructionBus (9 downto 7);
@@ -94,6 +88,11 @@ elsif (InstructionBus(11 downto 10) = "00") then
     -- Here 0 - Addtion, 1 - Subtraction
     Add_Sub_Select <= '0';
     
+    -- Register A will store the output
+    RegisterEnable <= InstructionBus (9 downto 7);
+    
+    -- Set the Immediate Value to undefined
+    ImmediateValue <= "1111";
     
 -- Negate Instruction
 elsif (InstructionBus(11 downto 10) = "01") then
@@ -107,7 +106,7 @@ elsif (InstructionBus(11 downto 10) = "01") then
     LoadSelect <= '1';
     
     -- Set immediate value to undefined since it is not needed
-    ImmediateValue <= "UUUU";
+    ImmediateValue <= "0000";
     
     -- Register R0 is hardcoded to 0000
     RegisterSelectA <= "000";
@@ -130,22 +129,22 @@ elsif (InstructionBus(11 downto 10) = "11") then
     -- This will also provide it as an input to the instruction decoder
     
     -- Set the Register Enable to Undefined since it will not be needed
-    RegisterEnable <= "UUU";
+    RegisterEnable <= "000";
     
     -- Set the LoadSelect also to undefined since it is also not used
     LoadSelect <= 'U';
     
     -- Set immediate value to undefined since it is not needed
-    ImmediateValue <= "UUUU";
+    ImmediateValue <= "0000";
     
     -- Load the required register into the MuxA
     RegisterSelectA <= InstructionBus(9 downto 7);
     
     -- We don't need a register loaded in the 8 way mux B
-    RegisterSelectB <= "UUU";
+    RegisterSelectB <= "000";
     
     -- Set the Add_Sub_Select to undefined since we don't need it to perform a calculation
-    Add_Sub_Select <= 'U';
+    Add_Sub_Select <= '0';
     
     -- Check if the RegForJump is 0000
     if (RegForJump = "0000") then

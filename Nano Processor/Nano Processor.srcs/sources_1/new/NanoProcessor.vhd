@@ -1,35 +1,8 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 06/07/2023 10:20:58 PM
--- Design Name: 
--- Module Name: NanoProcessor - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity NanoProcessor is
     Port (
@@ -37,7 +10,8 @@ entity NanoProcessor is
         Reset : in STD_LOGIC;
         OverflowFlag : out STD_LOGIC;
         ZeroFlag : out STD_LOGIC;
-        seg: out STD_LOGIC_VECTOR (6 downto 0)
+        seg: out STD_LOGIC_VECTOR (6 downto 0);
+        led : out STD_LOGIC_VECTOR (11 downto 0)
     );
 end NanoProcessor;
 
@@ -307,6 +281,10 @@ SevenSegLUT : LUT_16_7
     I => AddSubOut,
     O => seg
  );
+ 
+ led(11 downto 8) <= DataBus1;
+ led(7 downto 4) <= DataBus2;
+ led(3 downto 0) <= RegInput;
            
 
 end Behavioral;

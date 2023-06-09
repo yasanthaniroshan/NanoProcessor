@@ -10,7 +10,7 @@ entity Reg is
            En : in STD_LOGIC;
            Reset : in STD_LOGIC;
            Clk : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (3 downto 0));
+           Q : out STD_LOGIC_VECTOR (3 downto 0) := "0000");
 end Reg;
 
 --Defining architecture of register

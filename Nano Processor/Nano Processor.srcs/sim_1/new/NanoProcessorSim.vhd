@@ -38,9 +38,9 @@ begin
   -- Clock generation process
   process
   begin
-    Clk <= '0';
-    wait for 10 ns;
     Clk <= '1';
+    wait for 10 ns;
+    Clk <= '0';
     wait for 10 ns;
   end process;
   

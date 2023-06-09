@@ -35,7 +35,7 @@ entity ProgramCounter is
     Port ( Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
            NextAddress : in STD_LOGIC_VECTOR (2 downto 0);
-           MemorySelect : out STD_LOGIC_VECTOR (2 downto 0));
+           MemorySelect : out STD_LOGIC_VECTOR (2 downto 0) := "000");
 end ProgramCounter;
 
 architecture Behavioral of ProgramCounter is
@@ -44,7 +44,7 @@ begin
 
 process (Clk) begin
     if rising_edge(Clk) then
-        if (Reset = '1' or NextAddress = "UUU") then
+        if (Reset = '1') then
             MemorySelect <= "000";
         else
             MemorySelect <= NextAddress;
@@ -52,7 +52,7 @@ process (Clk) begin
     
     end if;
 end process;
-    
+
 
 
 end Behavioral;

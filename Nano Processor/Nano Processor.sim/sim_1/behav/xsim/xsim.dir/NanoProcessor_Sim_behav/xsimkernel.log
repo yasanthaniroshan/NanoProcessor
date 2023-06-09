@@ -2,3 +2,6 @@ Running: xsim.dir/NanoProcessor_Sim_behav/xsimk.exe -simmode gui -wdb NanoProces
 Design successfully loaded
 Design Loading Memory Usage: 6656 KB (Peak: 6656 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6940 KB (Peak: 6940 KB)
+Simulation CPU Usage: 15 ms

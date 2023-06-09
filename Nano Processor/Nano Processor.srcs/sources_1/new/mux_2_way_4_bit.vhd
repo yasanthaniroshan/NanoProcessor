@@ -41,5 +41,15 @@ end mux_2_way_4_bit;
 architecture Behavioral of mux_2_way_4_bit is
 
 begin
-Mux_out <= IN_0 when(Sel = '0') else IN_1;
+
+process (IN_0,IN_1,Sel)
+begin
+
+if (Sel = '0') then
+    Mux_out <= IN_0;
+elsif (Sel = '1') then
+    Mux_out <= IN_1;
+end if;
+
+end process;
 end Behavioral;

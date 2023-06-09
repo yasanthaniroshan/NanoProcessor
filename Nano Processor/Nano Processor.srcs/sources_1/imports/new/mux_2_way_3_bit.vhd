@@ -41,5 +41,5 @@ end mux_2_way_3_bit;
 architecture Behavioral of mux_2_way_3_bit is
 
 begin
-Mux_out <= IN_0 when(Sel = '0') else IN_1;
+Mux_out <= IN_0 when (Sel = '0') else IN_1;
 end Behavioral;
