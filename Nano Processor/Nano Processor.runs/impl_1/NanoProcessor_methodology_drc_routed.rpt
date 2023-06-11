@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Sun Jun 11 15:54:09 2023
+| Date         : Sun Jun 11 17:41:26 2023
 | Host         : Yasantha-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file NanoProcessor_methodology_drc_routed.rpt -pb NanoProcessor_methodology_drc_routed.pb -rpx NanoProcessor_methodology_drc_routed.rpx
 | Design       : NanoProcessor
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 11
+             Violations found: 16
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 11         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 16         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -64,27 +64,52 @@ Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
-The clock pin Register_Bank/Reg_1/Q_reg[3]/C is not reached by a timing clock
+The clock pin Register_Bank/Reg_2/Q_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Warning
 Non-clocked sequential cell  
-The clock pin Register_Bank/Reg_2/Q_reg[0]/C is not reached by a timing clock
+The clock pin Register_Bank/Reg_2/Q_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Warning
 Non-clocked sequential cell  
-The clock pin Register_Bank/Reg_2/Q_reg[1]/C is not reached by a timing clock
+The clock pin Register_Bank/Reg_2/Q_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Warning
 Non-clocked sequential cell  
-The clock pin Register_Bank/Reg_2/Q_reg[2]/C is not reached by a timing clock
+The clock pin Register_Bank/Reg_3/Q_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Warning
 Non-clocked sequential cell  
-The clock pin Register_Bank/Reg_2/Q_reg[3]/C is not reached by a timing clock
+The clock pin Register_Bank/Reg_3/Q_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin Register_Bank/Reg_3/Q_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin Register_Bank/Reg_7/Q_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin Register_Bank/Reg_7/Q_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin Register_Bank/Reg_7/Q_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin Register_Bank/Reg_7/Q_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 
