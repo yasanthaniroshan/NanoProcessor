@@ -11,8 +11,8 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
 Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
 Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
 Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
 Compiling architecture behavioral of entity xil_defaultlib.RegBank [regbank_default]

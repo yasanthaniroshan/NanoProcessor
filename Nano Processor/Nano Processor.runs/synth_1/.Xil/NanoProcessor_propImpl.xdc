@@ -25,6 +25,8 @@ set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN W3 [get_ports {led[10]}]
 set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U3 [get_ports {led[11]}]
+set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P3 [get_ports {led[12]}]
 set_property src_info {type:XDC file:1 line:79 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P1 [get_ports {OverflowFlag}]
 set_property src_info {type:XDC file:1 line:81 export:INPUT save:INPUT read:READ} [current_design]

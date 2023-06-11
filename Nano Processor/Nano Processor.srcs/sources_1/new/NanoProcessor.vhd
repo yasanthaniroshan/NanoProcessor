@@ -11,7 +11,7 @@ entity NanoProcessor is
         OverflowFlag : out STD_LOGIC;
         ZeroFlag : out STD_LOGIC;
         seg: out STD_LOGIC_VECTOR (6 downto 0);
-        led : out STD_LOGIC_VECTOR (11 downto 0)
+        led : out STD_LOGIC_VECTOR (12 downto 0)
     );
 end NanoProcessor;
 
@@ -25,9 +25,10 @@ component Instruction_Decoder
            RegisterSelectA : out STD_LOGIC_VECTOR (2 downto 0);
            RegisterSelectB : out STD_LOGIC_VECTOR (2 downto 0);
            Add_Sub_Select : out STD_LOGIC;
-           RegForJump : in STD_LOGIC_VECTOR (3 downto 0);
+           JumpCheck : in STD_LOGIC;
            JumpFlag : out STD_LOGIC;
-           JumpAddress : out STD_LOGIC_VECTOR (2 downto 0));
+           JumpAddress : out STD_LOGIC_VECTOR (2 downto 0)
+           );
 
 end component;
 
@@ -127,7 +128,7 @@ end component;
 
 signal InstructionBus : STD_LOGIC_VECTOR (11 downto 0);
 signal RegisterEnable : STD_LOGIC_VECTOR (2 downto 0);
-signal LoadSelect : STD_LOGIC;
+signal LoadSelectFromInstruction : STD_LOGIC;
 signal ImmediateValue  : STD_LOGIC_VECTOR (3 downto 0);
 signal RegisterSelectA, RegisterSelectB : STD_LOGIC_VECTOR (2 downto 0);
 signal AddSubSelect : STD_LOGIC;
@@ -150,6 +151,9 @@ signal AddSubOut : STD_LOGIC_VECTOR (3 downto 0);
 signal MemorySelect : STD_LOGIC_VECTOR (2 downto 0);
 signal Adder3BitOutput : STD_LOGIC_VECTOR (2 downto 0);
 signal NewInstructionAddress : STD_LOGIC_VECTOR (2 downto 0);
+signal tempLoadSelect : STD_LOGIC := '0';
+
+signal JumpCheckSignal : STD_LOGIC := '0';
 
 
 
@@ -164,12 +168,12 @@ Instruction_Decoder_0 : Instruction_Decoder
     port map (
        InstructionBus => InstructionBus,
        RegisterEnable => RegisterEnable,
-       LoadSelect => LoadSelect,
+       LoadSelect => LoadSelectFromInstruction,
        ImmediateValue => ImmediateValue,
        RegisterSelectA => RegisterSelectA,
        RegisterSelectB => RegisterSelectB,
        Add_Sub_Select => AddSubSelect,
-       RegForJump => MuxAOut,
+       JumpCheck => JumpCheckSignal,
        JumpFlag => JumpFlag,
        JumpAddress => JumpAddress
     );
@@ -236,7 +240,7 @@ Load_Select_Mux : mux_2_way_4_bit
 port map (
     IN_0 => ImmediateValue,
     IN_1 => AddSubOut,
-    Sel => LoadSelect,
+    Sel => LoadSelectFromInstruction,
     Mux_out => RegInput
 );
 
@@ -282,9 +286,14 @@ SevenSegLUT : LUT_16_7
     O => seg
  );
  
+ led(12) <= LoadSelectFromInstruction;
  led(11 downto 8) <= DataBus1;
  led(7 downto 4) <= DataBus2;
  led(3 downto 0) <= RegInput;
+ 
+
+ JumpCheckSignal <= NOT (MuxAOut(0) OR MuxAOut(1) OR MuxAOut(2) OR MuxAOut(3));
+ 
            
 
 end Behavioral;

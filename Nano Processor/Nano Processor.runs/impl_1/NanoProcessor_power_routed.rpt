@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Sun Jun 11 11:16:38 2023
+| Date             : Sun Jun 11 14:49:55 2023
 | Host             : Yasantha-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file NanoProcessor_power_routed.rpt -pb NanoProcessor_power_summary_routed.pb -rpx NanoProcessor_power_routed.rpx
 | Design           : NanoProcessor
@@ -30,15 +30,15 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.082        |
+| Total On-Chip Power (W)  | 0.083        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.010        |
+| Dynamic (W)              | 0.012        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
 | Junction Temperature (C) | 25.4         |
-| Confidence Level         | Low          |
+| Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
 | Design Nets Matched      | NA           |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      110 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       33 |     20800 |            0.16 |
-|   Register     |    <0.001 |       49 |     41600 |            0.12 |
+| Slice Logic    |    <0.001 |       99 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       30 |     20800 |            0.14 |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
-|   Others       |     0.000 |        8 |       --- |             --- |
+|   Register     |    <0.001 |       45 |     41600 |            0.11 |
+|   Others       |     0.000 |        4 |       --- |             --- |
 | Signals        |    <0.001 |       89 |       --- |             --- |
-| I/O            |     0.009 |       23 |       106 |           21.70 |
+| I/O            |     0.010 |       24 |       106 |           22.64 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.082 |          |           |                 |
+| Total          |     0.083 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -94,12 +94,12 @@ Table of Contents
 | User Input Data             | Confidence | Details                                               | Action                                                                                                             |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                      |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                          |                                                                                                                    |
 |                             |            |                                                       |                                                                                                                    |
-| Overall confidence level    | Low        |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -137,17 +137,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------------+-----------+
-| Name                    | Power (W) |
-+-------------------------+-----------+
-| NanoProcessor           |     0.010 |
-|   Instruction_Decoder_0 |    <0.001 |
-|   Program_Counter       |    <0.001 |
-|   Register_Bank         |    <0.001 |
-|     Reg_1               |    <0.001 |
-|     Reg_2               |    <0.001 |
-|     Reg_3               |    <0.001 |
-|   Slow_Clock            |    <0.001 |
-+-------------------------+-----------+
++-------------------+-----------+
+| Name              | Power (W) |
++-------------------+-----------+
+| NanoProcessor     |     0.012 |
+|   Program_Counter |    <0.001 |
+|   Register_Bank   |    <0.001 |
+|     Reg_1         |    <0.001 |
+|     Reg_2         |    <0.001 |
+|   Slow_Clock      |    <0.001 |
++-------------------+-----------+
 
 

@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="284920635fs"></ZoomEndTime>
-      <Cursor1Time time="40000000fs"></Cursor1Time>
+      <ZoomEndTime time="303170921fs"></ZoomEndTime>
+      <Cursor1Time time="89714000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/NanoProcessorSim/UUT/Register_Bank/Reg_1/Q" type="array">
       <obj_property name="ElementShortName">Q[3:0]</obj_property>
       <obj_property name="ObjectShortName">Q[3:0]</obj_property>
@@ -38,7 +38,18 @@
    <wvobject fp_name="/NanoProcessorSim/UUT/Load_Select_Mux/Mux_out" type="array">
       <obj_property name="ElementShortName">Mux_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">Mux_out[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/A" type="array">
+      <obj_property name="ElementShortName">A[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/B" type="array">
+      <obj_property name="ElementShortName">B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/RegisterEnable" type="array">
+      <obj_property name="ElementShortName">RegisterEnable[2:0]</obj_property>
+      <obj_property name="ObjectShortName">RegisterEnable[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/ImmediateValue" type="array">
       <obj_property name="ElementShortName">ImmediateValue[3:0]</obj_property>
@@ -51,7 +62,6 @@
    <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/S" type="array">
       <obj_property name="ElementShortName">S[3:0]</obj_property>
       <obj_property name="ObjectShortName">S[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/InstructionBus" type="array">
       <obj_property name="ElementShortName">InstructionBus[11:0]</obj_property>
@@ -65,6 +75,10 @@
       <obj_property name="ElementShortName">MemorySelect[2:0]</obj_property>
       <obj_property name="ObjectShortName">MemorySelect[2:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Program_Counter/NextAddress" type="array">
+      <obj_property name="ElementShortName">NextAddress[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NextAddress[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Slow_Clock/Slow_Clk_out" type="logic">
       <obj_property name="ElementShortName">Slow_Clk_out</obj_property>
       <obj_property name="ObjectShortName">Slow_Clk_out</obj_property>
@@ -72,5 +86,13 @@
    <wvobject fp_name="/NanoProcessorSim/UUT/Adder_3_bit_0/S" type="array">
       <obj_property name="ElementShortName">S[2:0]</obj_property>
       <obj_property name="ObjectShortName">S[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/ZeroFlag" type="logic">
+      <obj_property name="ElementShortName">ZeroFlag</obj_property>
+      <obj_property name="ObjectShortName">ZeroFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/LoadSelect" type="logic">
+      <obj_property name="ElementShortName">LoadSelect</obj_property>
+      <obj_property name="ObjectShortName">LoadSelect</obj_property>
    </wvobject>
 </wave_config>
