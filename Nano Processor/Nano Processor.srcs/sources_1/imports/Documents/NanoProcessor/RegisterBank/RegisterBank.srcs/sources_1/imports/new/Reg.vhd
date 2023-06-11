@@ -17,8 +17,8 @@ end Reg;
 architecture Behavioral of Reg is
 
 begin
-    process (Clk) begin
-        if (rising_edge(Clk)) then -- respond when clock rises
+    process (Clk,D) begin
+        if (falling_edge(Clk)) then -- respond when clock rises
             if Reset = '1' then
                 Q <= "0000";
             elsif En = '1' then -- Enable should be set

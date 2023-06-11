@@ -21,7 +21,7 @@ architecture Behavioral of ProgramROM is
 type rom_type is array (0 to 7) of std_logic_vector(11 downto 0);
  
  signal sevenSegment_ROM : rom_type := (
- "100010000011", ---0
+ "100010000010", ---0
  "100100000001", ---1
  "000010100000", ---2 
  "000000000000", ---3

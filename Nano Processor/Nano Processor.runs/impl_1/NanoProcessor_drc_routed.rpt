@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Fri Jun  9 16:48:46 2023
+| Date         : Sun Jun 11 11:16:37 2023
 | Host         : Yasantha-PC running 64-bit major release  (build 9200)
 | Command      : report_drc -file NanoProcessor_drc_routed.rpt -pb NanoProcessor_drc_routed.pb -rpx NanoProcessor_drc_routed.rpx
 | Design       : NanoProcessor
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 2
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 3          |
+| PDRC-153 | Warning  | Gated clock check                                   | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,17 +49,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net Program_Counter/E[0] is a gated clock net sourced by a combinational pin Program_Counter/Q_reg[2]_i_1/O, cell Program_Counter/Q_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net Program_Counter/led_OBUF[1] is a gated clock net sourced by a combinational pin Program_Counter/led_OBUF[3]_inst_i_1/O, cell Program_Counter/led_OBUF[3]_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net Register_Bank/Decoder_3_to_8_0/Decoder_2_to_4_0/E[0] is a gated clock net sourced by a combinational pin Register_Bank/Decoder_3_to_8_0/Decoder_2_to_4_0/p_2_out/O, cell Register_Bank/Decoder_3_to_8_0/Decoder_2_to_4_0/p_2_out. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Program_Counter/led_OBUF[2] is a gated clock net sourced by a combinational pin Program_Counter/led_OBUF[3]_inst_i_1/O, cell Program_Counter/led_OBUF[3]_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

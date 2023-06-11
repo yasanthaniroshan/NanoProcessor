@@ -1,49 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686309419">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686462283">
+  <File Type="PWROPT-DCP" Name="NanoProcessor_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="NanoProcessor_power_routed.rpt"/>
   <File Type="PA-TCL" Name="NanoProcessor.tcl"/>
-  <File Type="PWROPT-DCP" Name="NanoProcessor_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="NanoProcessor_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="NanoProcessor_reports.tcl"/>
   <File Type="BG-DRC" Name="NanoProcessor.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="NanoProcessor_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="NanoProcessor_timing_summary_init.rpt"/>
   <File Type="OPT-HWDEF" Name="NanoProcessor.hwdef"/>
   <File Type="OPT-DCP" Name="NanoProcessor_opt.dcp"/>
   <File Type="OPT-DRC" Name="NanoProcessor_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="NanoProcessor_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="NanoProcessor_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="NanoProcessor_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="NanoProcessor_placed.dcp"/>
   <File Type="PLACE-IO" Name="NanoProcessor_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="NanoProcessor_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="NanoProcessor_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="NanoProcessor_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="NanoProcessor_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="NanoProcessor_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="NanoProcessor_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="NanoProcessor_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="NanoProcessor_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="NanoProcessor_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="NanoProcessor_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="NanoProcessor_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="NanoProcessor.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="NanoProcessor_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="NanoProcessor_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="NanoProcessor_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="NanoProcessor_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="NanoProcessor_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="NanoProcessor_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="NanoProcessor_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="NanoProcessor.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="NanoProcessor_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="NanoProcessor_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="NanoProcessor.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="NanoProcessor_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="NanoProcessor_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-RBT" Name="NanoProcessor.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="NanoProcessor_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="NanoProcessor_methodology_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="NanoProcessor.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="NanoProcessor_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="NanoProcessor_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="NanoProcessor_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="NanoProcessor_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="NanoProcessor_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="NanoProcessor_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="NanoProcessor_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="NanoProcessor_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="NanoProcessor_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="NanoProcessor.vdi"/>
+  <File Type="ROUTE-CLK" Name="NanoProcessor_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="NanoProcessor_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="NanoProcessor_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="NanoProcessor_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="NanoProcessor_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="NanoProcessor_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="NanoProcessor.nky"/>
   <File Type="BITSTR-BMM" Name="NanoProcessor_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="NanoProcessor.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="NanoProcessor.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="NanoProcessor.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>

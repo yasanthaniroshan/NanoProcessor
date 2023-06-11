@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Fri Jun  9 16:48:47 2023
+| Date             : Sun Jun 11 11:16:38 2023
 | Host             : Yasantha-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file NanoProcessor_power_routed.rpt -pb NanoProcessor_power_summary_routed.pb -rpx NanoProcessor_power_routed.rpx
 | Design           : NanoProcessor
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.086        |
+| Total On-Chip Power (W)  | 0.082        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.015        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      104 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       30 |     20800 |            0.14 |
-|   Register     |    <0.001 |       46 |     41600 |            0.11 |
+| Slice Logic    |    <0.001 |      110 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       33 |     20800 |            0.16 |
+|   Register     |    <0.001 |       49 |     41600 |            0.12 |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |       88 |       --- |             --- |
-| I/O            |     0.013 |       23 |       106 |           21.70 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |       89 |       --- |             --- |
+| I/O            |     0.009 |       23 |       106 |           21.70 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.086 |          |           |                 |
+| Total          |     0.082 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,14 +140,13 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| NanoProcessor           |     0.015 |
+| NanoProcessor           |     0.010 |
 |   Instruction_Decoder_0 |    <0.001 |
 |   Program_Counter       |    <0.001 |
 |   Register_Bank         |    <0.001 |
-|     Decoder_3_to_8_0    |    <0.001 |
-|       Decoder_2_to_4_0  |    <0.001 |
 |     Reg_1               |    <0.001 |
 |     Reg_2               |    <0.001 |
+|     Reg_3               |    <0.001 |
 |   Slow_Clock            |    <0.001 |
 +-------------------------+-----------+
 

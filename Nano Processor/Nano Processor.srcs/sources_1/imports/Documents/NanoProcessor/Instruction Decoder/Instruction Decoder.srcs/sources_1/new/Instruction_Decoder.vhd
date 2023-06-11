@@ -41,7 +41,8 @@ entity Instruction_Decoder is
            Add_Sub_Select : out STD_LOGIC;
            RegForJump : in STD_LOGIC_VECTOR (3 downto 0);
            JumpFlag : out STD_LOGIC;
-           JumpAddress : out STD_LOGIC_VECTOR (2 downto 0));
+           JumpAddress : out STD_LOGIC_VECTOR (2 downto 0)
+           );
 end Instruction_Decoder;
 
 architecture Behavioral of Instruction_Decoder is

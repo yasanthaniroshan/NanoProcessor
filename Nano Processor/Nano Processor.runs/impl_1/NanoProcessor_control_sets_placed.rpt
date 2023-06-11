@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Fri Jun  9 16:48:24 2023
+| Date         : Sun Jun 11 11:16:13 2023
 | Host         : Yasantha-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file NanoProcessor_control_sets_placed.rpt
 | Design       : NanoProcessor
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     6 |
-| Unused register locations in slices containing registers |    26 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    23 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      3 |            5 |
+|      3 |            3 |
+|      9 |            1 |
 |    16+ |            1 |
 +--------+--------------+
 
@@ -45,9 +46,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               6 |            2 |
+| No           | No                    | No                     |               6 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              40 |           11 |
+| No           | Yes                   | No                     |              43 |           14 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -57,15 +58,14 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------------+---------------+-----------------------------------+------------------+----------------+
-|                      Clock Signal                     | Enable Signal |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+-------------------------------------------------------+---------------+-----------------------------------+------------------+----------------+
-|  Register_Bank/Decoder_3_to_8_0/Decoder_2_to_4_0/E[0] |               | Reset_IBUF                        |                1 |              3 |
-|  Program_Counter/E[0]                                 |               | Reset_IBUF                        |                1 |              3 |
-|  Program_Counter/led_OBUF[1]                          |               | Program_Counter/InstructionBus[2] |                1 |              3 |
-|  Slow_Clock/Slow_Clk_out                              |               |                                   |                1 |              3 |
-|  Clk_In_IBUF_BUFG                                     |               |                                   |                1 |              3 |
-|  Clk_In_IBUF_BUFG                                     |               | Slow_Clock/count[31]_i_1_n_0      |                8 |             31 |
-+-------------------------------------------------------+---------------+-----------------------------------+------------------+----------------+
++------------------------------+---------------+-----------------------------------+------------------+----------------+
+|         Clock Signal         | Enable Signal |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------------------+---------------+-----------------------------------+------------------+----------------+
+|  Program_Counter/led_OBUF[2] |               | Program_Counter/InstructionBus[2] |                2 |              3 |
+|  Slow_Clock/Slow_Clk_out     |               |                                   |                1 |              3 |
+|  Clk_In_IBUF_BUFG            |               |                                   |                2 |              3 |
+| ~Slow_Clock/Slow_Clk_out     |               | Reset_IBUF                        |                4 |              9 |
+|  Clk_In_IBUF_BUFG            |               | Slow_Clock/count[31]_i_1_n_0      |                8 |             31 |
++------------------------------+---------------+-----------------------------------+------------------+----------------+
 
 

@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="280351438fs"></ZoomEndTime>
-      <Cursor1Time time="83333000fs"></Cursor1Time>
+      <ZoomEndTime time="284920635fs"></ZoomEndTime>
+      <Cursor1Time time="40000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+      <ValueColumnWidth column_width="87"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/NanoProcessorSim/UUT/Register_Bank/Reg_1/Q" type="array">
       <obj_property name="ElementShortName">Q[3:0]</obj_property>
       <obj_property name="ObjectShortName">Q[3:0]</obj_property>
@@ -56,7 +56,10 @@
    <wvobject fp_name="/NanoProcessorSim/UUT/Instruction_Decoder_0/InstructionBus" type="array">
       <obj_property name="ElementShortName">InstructionBus[11:0]</obj_property>
       <obj_property name="ObjectShortName">InstructionBus[11:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Add_Sub_Component/S[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
    </wvobject>
    <wvobject fp_name="/NanoProcessorSim/UUT/Program_Counter/MemorySelect" type="array">
       <obj_property name="ElementShortName">MemorySelect[2:0]</obj_property>
@@ -65,5 +68,9 @@
    <wvobject fp_name="/NanoProcessorSim/UUT/Slow_Clock/Slow_Clk_out" type="logic">
       <obj_property name="ElementShortName">Slow_Clk_out</obj_property>
       <obj_property name="ObjectShortName">Slow_Clk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NanoProcessorSim/UUT/Adder_3_bit_0/S" type="array">
+      <obj_property name="ElementShortName">S[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S[2:0]</obj_property>
    </wvobject>
 </wave_config>
