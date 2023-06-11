@@ -11,7 +11,7 @@ entity NanoProcessor is
         OverflowFlag : out STD_LOGIC;
         ZeroFlag : out STD_LOGIC;
         seg: out STD_LOGIC_VECTOR (6 downto 0);
-        led : out STD_LOGIC_VECTOR (12 downto 0)
+        anode : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end NanoProcessor;
 
@@ -135,30 +135,23 @@ signal AddSubSelect : STD_LOGIC;
 signal DataBus0, DataBus1, DataBus2, DataBus3, DataBus4, DataBus5, DataBus6, DataBus7 : STD_LOGIC_VECTOR (3 downto 0);
 signal JumpFlag : STD_LOGIC;
 signal JumpAddress : STD_LOGIC_VECTOR (2 downto 0);
+signal JumpCheckSignal : STD_LOGIC := '0';
 
        
 signal RegSel : STD_LOGIC_VECTOR ( 2 downto 0);
-signal Clk : STD_LOGIC;
-signal Slow_Clk_in : STD_LOGIC;
 signal RegBankEnable : STD_LOGIC := '1';
 signal RegInput : STD_LOGIC_VECTOR (3 downto 0);
 
+signal Clk : STD_LOGIC;
+signal Slow_Clk_in : STD_LOGIC;
+
 signal MuxAOut, MuxBOut : STD_LOGIC_VECTOR (3 downto 0);
-
 signal AddSubOut : STD_LOGIC_VECTOR (3 downto 0);
-
 
 signal MemorySelect : STD_LOGIC_VECTOR (2 downto 0);
 signal Adder3BitOutput : STD_LOGIC_VECTOR (2 downto 0);
 signal NewInstructionAddress : STD_LOGIC_VECTOR (2 downto 0);
-signal tempLoadSelect : STD_LOGIC := '0';
 
-signal JumpCheckSignal : STD_LOGIC := '0';
-
-
-
--- Delete this, only for testing
-signal testSignal : STD_LOGIC := '1';
 
 
 
@@ -285,15 +278,14 @@ SevenSegLUT : LUT_16_7
     I => DataBus7,
     O => seg
  );
- 
- led(12) <= LoadSelectFromInstruction;
- led(11 downto 8) <= DataBus1;
- led(7 downto 4) <= DataBus2;
- led(3 downto 0) <= RegInput;
- 
 
- JumpCheckSignal <= NOT (MuxAOut(0) OR MuxAOut(1) OR MuxAOut(2) OR MuxAOut(3));
  
+-- JumpCheckSignal is passed to the instruction decoder
+-- 1 if MuxAOut = "0000" and 0 for others
+JumpCheckSignal <= NOT (MuxAOut(0) OR MuxAOut(1) OR MuxAOut(2) OR MuxAOut(3));
+ 
+-- Anode of the 7 segment display
+anode <= "1110";
            
 
 end Behavioral;

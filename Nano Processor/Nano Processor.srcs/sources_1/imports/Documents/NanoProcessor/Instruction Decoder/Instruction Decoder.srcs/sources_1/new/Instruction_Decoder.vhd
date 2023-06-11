@@ -1,35 +1,7 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 06/01/2023 11:54:45 AM
--- Design Name: 
--- Module Name: Instruction_Decoder - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Instruction_Decoder is
     Port ( InstructionBus : in STD_LOGIC_VECTOR (11 downto 0);
@@ -69,11 +41,15 @@ Decoder_2_to_4_0 : Decoder_2_to_4
         Y => Instruction
     );
     
-    
+  
+-- OUTPUT OF THE DECODER IS MAPPED TO EACH INSTRUCTION SIGNAL
+-- EACH SIGNAL IS 1 IF THE INSTRUCTION IS ACTIVE
+-- E.G. WHEN MOVI INSTRUCION IS ACTIVE, MOVI='1', ADD='0', NEG='0', JZR='0'
 MOVI <= Instruction(2);
 ADD <= Instruction(0);
 NEG <= Instruction(1);
 JZR <= Instruction(3);
+
 
 -- LOAD SELECT SHOULD BE ONE ONLY FOR ADD AND NEG INSTRUCTIONS
 LoadSelect <= ADD OR NEG;

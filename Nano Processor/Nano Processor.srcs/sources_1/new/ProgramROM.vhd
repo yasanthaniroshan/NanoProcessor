@@ -19,17 +19,22 @@ end ProgramROM;
 architecture Behavioral of ProgramROM is
 
 type rom_type is array (0 to 7) of std_logic_vector(11 downto 0);
+
+-- GET THE SUM OF ALL THE NUMBERS FROM 1 TO 3
+-- FIRST LOAD 1,2,3 INTO REGISTERS
+-- THEN ADD EACH OF THE REGISTERS TO GET THE SUM
  
  signal sevenSegment_ROM : rom_type := (
- "100010000001", ---0
- "100100000010", ---1
- "100110000011", ---2 
- "101110000000", ---3
- "001110010000", ---4
- "001110100000", ---5
- "001110110000", ---6
- "000000000000" ---7
+  "100010000001", -- LOAD 1 INTO R1
+  "100100000010", -- LOAD 2 INTO R2
+  "100110000011", -- LOAD 3 INTO R3
+  "101110000000", -- LOAD 0 INTO R7
+  "001110010000", -- ADD R7 AND R1
+  "001110100000", -- ADD R7 AND R2
+  "001110110000", -- ADD R7 AND R3
+  "000000000000"  -- EMPTY INSTRUCTION !
  );
+
 
 
 begin
