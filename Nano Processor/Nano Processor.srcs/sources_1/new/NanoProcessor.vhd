@@ -282,7 +282,7 @@ Slow_Clock : Slow_Clk
            
 SevenSegLUT : LUT_16_7 
  port map(
-    I => AddSubOut,
+    I => DataBus7,
     O => seg
  );
  

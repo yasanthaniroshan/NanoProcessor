@@ -1,4 +1,7 @@
-Running: xsim.dir/NanoProcessorSim_behav/xsimk.exe -simmode gui -wdb NanoProcessorSim_behav.wdb -simrunnum 0 -socket 60718
+Running: xsim.dir/NanoProcessorSim_behav/xsimk.exe -simmode gui -wdb NanoProcessorSim_behav.wdb -simrunnum 0 -socket 61191
 Design successfully loaded
-Design Loading Memory Usage: 6668 KB (Peak: 6668 KB)
+Design Loading Memory Usage: 6692 KB (Peak: 6692 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7276 KB (Peak: 7276 KB)
+Simulation CPU Usage: 0 ms

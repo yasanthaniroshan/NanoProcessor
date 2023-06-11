@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686475085">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1686478938">
   <File Type="PA-TCL" Name="NanoProcessor.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="NanoProcessor_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="NanoProcessor_reports.tcl"/>

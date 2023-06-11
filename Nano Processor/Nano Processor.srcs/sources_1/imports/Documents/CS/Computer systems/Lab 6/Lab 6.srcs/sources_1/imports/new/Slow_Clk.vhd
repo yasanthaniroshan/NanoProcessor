@@ -44,7 +44,7 @@ begin
         if (rising_edge(Slow_Clk_in)) then
             count <= count +1;
 --          if(count = 1) then 
-          if(count = 100000000) then
+          if(count = 10000000) then
                 clk_status <= not clk_status;
                 Slow_Clk_out <= clk_status;
                 count <= 1;

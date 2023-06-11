@@ -77,12 +77,12 @@ JZR <= Instruction(3);
 
 LoadSelect <= ADD OR NEG;
 
-RegisterEnable <= InstructionBus(9 downto 7);
+RegisterEnable <= InstructionBus(9 downto 7) when (JZR = '0') else "000";
 
-RegisterSelectA <= InstructionBus(9 downto 7);
-RegisterSelectB <= InstructionBus(6 downto 4);
+RegisterSelectA <= InstructionBus(9 downto 7) when (NEG = '0') else "000";
+RegisterSelectB <= InstructionBus(6 downto 4) when (NEG = '0') else InstructionBus(9 downto 7);
 
-ImmediateValue <= InstructionBus(3 downto 0);
+ImmediateValue <= InstructionBus(3 downto 0) when (MOVI = '1') else "0000";
 
 Add_Sub_Select <= InstructionBus(10);
 
